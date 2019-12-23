@@ -5,4 +5,13 @@
     <string name="game_tebak">Game Tebak Pakaian Adat</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="keluar">Keluar</string>
+    <string name="menu_about">Tentang Aplikasi</string>
+    <string name="about_text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc non tortor sodales fringilla. Etiam et efficitur ipsum.
+        \n\n
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        \n\n
+        Proin non commodo eros. Mauris vel hendrerit augue. Pellentesque id imperdiet metus. Cras aliquet neque eu consequat aliquet. Maecenas a justo ut lacus aliquam pretium sed at velit.
+        \n\n
+     </string>
 </resources>

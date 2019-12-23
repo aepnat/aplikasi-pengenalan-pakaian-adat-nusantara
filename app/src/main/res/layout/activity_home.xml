@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bgapps"
     android:weightSum="10"
-    tools:context="com.lina.pengenalanpakaianadatnusantaran.HomeActivity">
+    tools:context=".HomeActivity">
 
     <RelativeLayout
         android:layout_weight="2"
@@ -15,7 +15,6 @@
         android:layout_height="0dp">
 
         <TextView
-            android:id="@+id/textGrid"
             android:text="@string/menu_utama"
             android:textSize="34sp"
             android:textColor="#FFF"
@@ -125,6 +124,7 @@
         <!-- COLUMN 1  -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardAbout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -166,6 +166,7 @@
         <!-- COLUMN 2  -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardExit"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
