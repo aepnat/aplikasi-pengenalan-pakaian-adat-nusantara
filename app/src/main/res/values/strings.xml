@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Pengenalan Pakaian Adat Nusantaran</string>
+    <string name="app_name">Pengenalan Pakaian Adat Nusantara</string>
+    <string name="menu_utama">Menu Utama</string>
+    <string name="materi_pakaian">Materi Pakaian adat Nusantara 34 Provinsi</string>
+    <string name="game_tebak">Game Tebak Pakaian Adat</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="keluar">Keluar</string>
 </resources>

@@ -16,7 +16,7 @@
 
         <TextView
             android:id="@+id/textGrid"
-            android:text="Menu Utama"
+            android:text="@string/menu_utama"
             android:textSize="34sp"
             android:textColor="#FFF"
             android:layout_centerInParent="true"
@@ -62,12 +62,12 @@
                 <ImageView
                     android:src="@drawable/background"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Materi Pakaian adat Nusantara 34 Provinsi"
+                    android:text="@string/materi_pakaian"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
@@ -103,12 +103,12 @@
                 <ImageView
                     android:src="@drawable/ilustrasi2"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Game Tebak Pakaian Adat"
+                    android:text="@string/game_tebak"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
@@ -145,14 +145,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/contact"
+                    android:src="@drawable/about_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Tentang Aplikasi"
+                    android:text="@string/tentang_aplikasi"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
@@ -186,14 +186,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logout"
+                    android:src="@drawable/cancel"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Keluar"
+                    android:text="@string/keluar"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
