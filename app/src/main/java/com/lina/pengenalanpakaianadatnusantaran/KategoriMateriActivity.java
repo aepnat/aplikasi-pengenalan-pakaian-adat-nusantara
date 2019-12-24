@@ -23,5 +23,14 @@ public class KategoriMateriActivity extends AppCompatActivity {
             }
         });
 
+        CardView cardPakaianAdatPengantin = findViewById(R.id.cardPakaianAdatPengantin);
+        cardPakaianAdatPengantin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(KategoriMateriActivity.this, MateriPakaianAdatPengantinActivity.class);
+                KategoriMateriActivity.this.startActivity(intent);
+            }
+        });
+
     }
 }

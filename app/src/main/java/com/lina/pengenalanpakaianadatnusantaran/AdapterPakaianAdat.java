@@ -12,13 +12,13 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
-public class AdapaterPakaianAdat extends PagerAdapter {
+public class AdapterPakaianAdat extends PagerAdapter {
 
     private List<PakaianAdatModel> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public AdapaterPakaianAdat(List<PakaianAdatModel> models, Context context) {
+    public AdapterPakaianAdat(List<PakaianAdatModel> models, Context context) {
         this.models = models;
         this.context = context;
     }

@@ -12,9 +12,8 @@ import java.util.List;
 public class MateriPakaianAdatActivity extends AppCompatActivity {
 
     ViewPager viewPager;
-    AdapaterPakaianAdat adapter;
+    AdapterPakaianAdat adapter;
     List<PakaianAdatModel> models;
-    ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +41,7 @@ public class MateriPakaianAdatActivity extends AppCompatActivity {
         models.add(new PakaianAdatModel(R.drawable.ntt_suku_sumba, "Nusa Tenggara Timur Suku Sumba", "Pakaian adat sehari - hari Nusa Tenggara Timur Suku Sumba"));
         models.add(new PakaianAdatModel(R.drawable.ntt_suku_timor_barat_bajawan, "Nusa Tenggara Timur Suku Timor Barat & Bajawa", "Pakaian adat sehari - hari Nusa Tenggara Timur Suku Timor Barat & Bajawa"));
 
-        adapter = new AdapaterPakaianAdat(models, this);
+        adapter = new AdapterPakaianAdat(models, this);
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
