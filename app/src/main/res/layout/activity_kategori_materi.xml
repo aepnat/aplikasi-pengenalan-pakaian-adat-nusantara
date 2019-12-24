@@ -39,7 +39,7 @@
         <!-- COLUMN 1  -->
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardMateri"
+            android:id="@+id/cardPakaianAdat"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
