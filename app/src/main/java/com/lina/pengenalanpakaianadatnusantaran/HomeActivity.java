@@ -14,6 +14,15 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        CardView cardMateri = findViewById(R.id.cardMateri);
+        cardMateri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, KategoriMateriActivity.class);
+                HomeActivity.this.startActivity(intent);
+            }
+        });
+
         CardView cardExit = findViewById(R.id.cardExit);
         cardExit.setOnClickListener(new View.OnClickListener() {
             @Override
