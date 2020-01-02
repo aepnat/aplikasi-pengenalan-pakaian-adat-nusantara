@@ -40,5 +40,14 @@ public class HomeActivity extends AppCompatActivity {
                 HomeActivity.this.startActivity(intent);
             }
         });
+
+        CardView cardKategoriGame = findViewById(R.id.cardKategoriGame);
+        cardKategoriGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, KategoriGameActivity.class);
+                HomeActivity.this.startActivity(intent);
+            }
+        });
     }
 }

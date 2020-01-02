@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bgapps"
     android:weightSum="10"
-    tools:context=".KategoriMateriActivity">
+    tools:context=".KategoriGameActivity">
 
     <RelativeLayout
         android:layout_weight="2"
@@ -15,7 +15,7 @@
         android:layout_height="0dp">
 
         <TextView
-            android:text="Pilih Kategori Materi"
+            android:text="Pilih Kategori Game"
             android:textSize="34sp"
             android:textColor="#FFF"
             android:layout_centerInParent="true"
@@ -39,7 +39,7 @@
         <!-- COLUMN 1  -->
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardPakaianAdat"
+            android:id="@+id/cardGamePakaianAdat"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -61,7 +61,7 @@
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Materi Pakaian Adat Sehari - hari"
+                    android:text="Game Pakaian Adat Sehari - hari"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
@@ -75,7 +75,7 @@
         <!-- COLUMN 2  -->
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardPakaianAdatPengantin"
+            android:id="@+id/cardGamePakaianAdatPengantin"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -97,7 +97,7 @@
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Materi pakaian adat pengantin"
+                    android:text="Game Pakaian Adat Pengantin"
                     android:textColor="#000"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
