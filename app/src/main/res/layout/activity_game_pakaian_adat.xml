@@ -1,0 +1,222 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgapps"
+    android:weightSum="10"
+    tools:context=".AboutActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Game Pakaian Adat"
+            android:textSize="34sp"
+            android:textColor="#FFF"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:rowCount="2"
+            android:columnCount="1"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/gambar_pertanyaan"
+                        android:src="@drawable/ilustrasi2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp" />
+
+                    <TextView
+                        android:id="@+id/teks_pertanyaan"
+                        android:textAlignment="textStart"
+                        android:text="Pakaian adat dari daerah mana gambar di atas?"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jawaban_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="#FFF"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAlignment="textStart"
+                        android:text="A. DKI Jakarta"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jawaban_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAlignment="textStart"
+                        android:text="B. DKI Jakarta"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jawaban_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAlignment="textStart"
+                        android:text="C. DKI Jakarta"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jawaban_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAlignment="textStart"
+                        android:text="D. DKI Jakarta"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </ScrollView>
+
+
+</LinearLayout>
