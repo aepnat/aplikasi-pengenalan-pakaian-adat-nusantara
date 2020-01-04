@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class GameActivity extends AppCompatActivity {
-
     private CardView cardPertanyaan;
     private CardView cardJawabanA;
     private CardView cardJawabanB;
@@ -170,6 +170,12 @@ public class GameActivity extends AppCompatActivity {
         if (jawaban.equals(dataPertanyaan.get(posisiPertanyanModel).getJawabanBenar())) {
             skor++;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(GameActivity.this, "Kamu harus menyelesaikan kuis ini.",
+                Toast.LENGTH_SHORT).show();
     }
 
 }
