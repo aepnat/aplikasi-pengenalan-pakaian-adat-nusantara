@@ -10,16 +10,13 @@ import android.widget.TextView;
 
 public class SkorActivity extends AppCompatActivity {
 
-    private TextView textSkor;
-    private CardView cardSelesai;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skor);
 
-        textSkor = findViewById(R.id.teks_skor);
-        cardSelesai = findViewById(R.id.cardSelesai);
+        TextView textSkor = findViewById(R.id.teks_skor);
+        CardView cardSelesai = findViewById(R.id.cardSelesai);
 
         String skor = String.valueOf(getIntent().getIntExtra("skor", 0));
         String total = String.valueOf(getIntent().getIntExtra("total", 0));
