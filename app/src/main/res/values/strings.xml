@@ -14,4 +14,7 @@
         Proin non commodo eros. Mauris vel hendrerit augue. Pellentesque id imperdiet metus. Cras aliquet neque eu consequat aliquet. Maecenas a justo ut lacus aliquam pretium sed at velit.
         \n\n
      </string>
+    <string name="skor">SKOR</string>
+    <string name="skor_nilai_strip">-</string>
+    <string name="selesai">Selesai</string>
 </resources>

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher2_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GamePakaianAdatActivity"></activity>
+        <activity android:name=".SkorActivity"></activity>
+        <activity android:name=".GamePakaianAdatActivity" />
         <activity android:name=".KategoriGameActivity" />
         <activity android:name=".MateriPakaianAdatPengantinActivity" />
         <activity android:name=".MateriPakaianAdatActivity" />

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -98,6 +99,11 @@ public class GamePakaianAdatActivity extends AppCompatActivity {
                 if (posisiPertanyanModel == dataPertanyaan.size()){
                     posisiPertanyanModel--;
                     // tampilkan skor activity
+                    Intent intent = new Intent(GamePakaianAdatActivity.this, SkorActivity.class);
+                    intent.putExtra("skor", skor);
+                    intent.putExtra("total", dataPertanyaan.size());
+                    startActivity(intent);
+
                     Toast.makeText(GamePakaianAdatActivity.this, "Skor kamu: " + skor,
                             Toast.LENGTH_LONG).show();
                     return;
