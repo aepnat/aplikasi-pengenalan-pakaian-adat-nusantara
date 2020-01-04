@@ -27,7 +27,7 @@ public class MenuUtamaActivity extends AppCompatActivity {
         cardExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                finishAffinity();
                 System.exit(0);
             }
         });

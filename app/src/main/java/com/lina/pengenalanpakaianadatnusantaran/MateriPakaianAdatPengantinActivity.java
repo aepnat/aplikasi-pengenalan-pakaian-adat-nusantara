@@ -52,6 +52,7 @@ public class MateriPakaianAdatPengantinActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MateriPakaianAdatPengantinActivity.this, KategoriMateriActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
