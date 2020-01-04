@@ -14,10 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/back_border"/>
+
         <TextView
             android:text="@string/menu_about"
             android:textSize="34sp"
             android:textColor="#FFF"
+            android:paddingTop="40dp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -27,11 +36,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
         android:layout_marginBottom="16dp"
-        android:layout_rowWeight="1"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
         android:background="#FFFFFF"
         app:cardBackgroundColor="#FFFFFF"
         app:cardElevation="8dp"
@@ -49,7 +57,6 @@
                 android:text="@string/about_text"
                 android:textColor="#000"
                 android:textSize="12sp"
-                android:layout_marginTop="6dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

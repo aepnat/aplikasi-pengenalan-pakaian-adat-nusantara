@@ -10,16 +10,23 @@
     tools:context=".KategoriMateriActivity">
     <RelativeLayout
         android:id="@+id/titleActivity"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="40dp"
-        android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:contentDescription="@string/back_button"
+            android:id="@+id/back_icon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/back_border"/>
+
         <TextView
-            android:text="Pakaian Adat Sehari hari"
+            android:text="@string/pakaian_adat_sehari_hari"
             android:textSize="34sp"
             android:textColor="#FFF"
+            android:paddingTop="80dp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

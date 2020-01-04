@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class KategoriMateriActivity extends AppCompatActivity {
 
@@ -32,5 +33,13 @@ public class KategoriMateriActivity extends AppCompatActivity {
             }
         });
 
+        ImageView imageBackIcon = findViewById(R.id.back_icon);
+        imageBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(KategoriMateriActivity.this, MenuUtamaActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

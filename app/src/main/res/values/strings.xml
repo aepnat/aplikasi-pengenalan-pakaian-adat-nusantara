@@ -19,4 +19,8 @@
     <string name="selesai">Selesai</string>
     <string name="strip">-</string>
     <string name="pertanyaan_game">Pakaian adat dari daerah mana gambar di atas?</string>
+    <string name="pilih_kategori_materi">Pilih Kategori Materi</string>
+    <string name="pakaian_adat_sehari_hari">Pakaian Adat Sehari hari</string>
+    <string name="pakaian_adat_pengantin">Pakaian Adat Pengantin</string>
+    <string name="back_button">back button</string>
 </resources>
