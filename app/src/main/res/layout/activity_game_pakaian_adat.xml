@@ -41,6 +41,7 @@
             android:padding="14dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardPertanyaan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -102,8 +103,9 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/teks_jawaban_a"
                         android:textAlignment="textStart"
-                        android:text="A. DKI Jakarta"
+                        android:text="A. -"
                         android:textColor="#000"
                         android:textSize="12sp"
                         android:layout_marginTop="6dp"
@@ -136,8 +138,9 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/teks_jawaban_b"
                         android:textAlignment="textStart"
-                        android:text="B. DKI Jakarta"
+                        android:text="B. -"
                         android:textColor="#000"
                         android:textSize="12sp"
                         android:layout_marginTop="6dp"
@@ -170,8 +173,9 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/teks_jawaban_c"
                         android:textAlignment="textStart"
-                        android:text="C. DKI Jakarta"
+                        android:text="C. -"
                         android:textColor="#000"
                         android:textSize="12sp"
                         android:layout_marginTop="6dp"
@@ -204,8 +208,9 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/teks_jawaban_d"
                         android:textAlignment="textStart"
-                        android:text="D. DKI Jakarta"
+                        android:text="D. -"
                         android:textColor="#000"
                         android:textSize="12sp"
                         android:layout_marginTop="6dp"
