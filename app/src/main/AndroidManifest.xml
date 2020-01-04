@@ -18,8 +18,8 @@
         <activity android:name=".MateriPakaianAdatPengantinActivity" />
         <activity android:name=".MateriPakaianAdatActivity" />
         <activity android:name=".KategoriMateriActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".TentangAplikasiActivity" />
+        <activity android:name=".MenuUtamaActivity" />
         <activity
             android:name=".SplashActivity"
             android:noHistory="true">

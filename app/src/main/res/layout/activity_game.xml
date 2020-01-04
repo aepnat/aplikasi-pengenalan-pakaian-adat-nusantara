@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bgapps"
     android:weightSum="10"
-    tools:context=".AboutActivity">
+    tools:context=".TentangAplikasiActivity">
 
     <RelativeLayout
         android:layout_marginTop="50dp"

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bgapps"
     android:weightSum="10"
-    tools:context=".HomeActivity">
+    tools:context=".MenuUtamaActivity">
 
     <RelativeLayout
         android:layout_weight="2"

@@ -37,7 +37,7 @@ public class AdapterPakaianAdat extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.item, container, false);
+        View view = layoutInflater.inflate(R.layout.item_materi, container, false);
 
         ImageView imageView;
         TextView title, desc;

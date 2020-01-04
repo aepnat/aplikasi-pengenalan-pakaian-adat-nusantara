@@ -29,7 +29,7 @@ public class SkorActivity extends AppCompatActivity {
         cardSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SkorActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SkorActivity.this, MenuUtamaActivity.class);
                 SkorActivity.this.startActivity(intent);
             }
         });

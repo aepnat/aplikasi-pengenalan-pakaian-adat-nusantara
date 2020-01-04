@@ -7,19 +7,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeActivity extends AppCompatActivity {
+public class MenuUtamaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_menu_utama);
 
         CardView cardMateri = findViewById(R.id.cardMateri);
         cardMateri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, KategoriMateriActivity.class);
-                HomeActivity.this.startActivity(intent);
+                Intent intent = new Intent(MenuUtamaActivity.this, KategoriMateriActivity.class);
+                MenuUtamaActivity.this.startActivity(intent);
             }
         });
 
@@ -36,8 +36,8 @@ public class HomeActivity extends AppCompatActivity {
         cardAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
-                HomeActivity.this.startActivity(intent);
+                Intent intent = new Intent(MenuUtamaActivity.this, TentangAplikasiActivity.class);
+                MenuUtamaActivity.this.startActivity(intent);
             }
         });
 
@@ -45,8 +45,8 @@ public class HomeActivity extends AppCompatActivity {
         cardKategoriGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, KategoriGameActivity.class);
-                HomeActivity.this.startActivity(intent);
+                Intent intent = new Intent(MenuUtamaActivity.this, KategoriGameActivity.class);
+                MenuUtamaActivity.this.startActivity(intent);
             }
         });
     }

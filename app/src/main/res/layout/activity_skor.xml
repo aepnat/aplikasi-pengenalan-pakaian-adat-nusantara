@@ -8,7 +8,7 @@
     android:background="@drawable/bgapps"
     android:paddingTop="40dp"
     android:weightSum="10"
-    tools:context=".AboutActivity">
+    tools:context=".TentangAplikasiActivity">
 
     <TextView
         android:text="@string/skor"
