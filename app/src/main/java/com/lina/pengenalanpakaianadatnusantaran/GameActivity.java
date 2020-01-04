@@ -6,38 +6,38 @@ import androidx.cardview.widget.CardView;
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class GamePakaianAdatActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
     private CardView cardPertanyaan;
     private CardView cardJawabanA;
     private CardView cardJawabanB;
     private CardView cardJawabanC;
     private CardView cardJawabanD;
+
     private ImageView gambarPertanyaan;
+
     private TextView jawabanA;
     private TextView jawabanB;
     private TextView jawabanC;
     private TextView jawabanD;
-    private int countAnimateStart = 0;
-    private int countAnimateEnd = 0;
+
     private List<PertanyaanModel> dataPertanyaan;
+    private int hitungMulaiAnimasi = 0;
+    private int hitungAkhirAnimasi = 0;
     private int posisiPertanyanModel = 0;
     private int skor = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_pakaian_adat);
+        setContentView(R.layout.activity_game);
 
         cardPertanyaan = findViewById(R.id.cardPertanyaan);
         cardJawabanA = findViewById(R.id.jawaban_a);
@@ -50,39 +50,27 @@ public class GamePakaianAdatActivity extends AppCompatActivity {
         jawabanC = findViewById(R.id.teks_jawaban_c);
         jawabanD = findViewById(R.id.teks_jawaban_d);
 
-        dataPertanyaan = new ArrayList<>();
-        dataPertanyaan.add(new PertanyaanModel(R.drawable.bali,
-                "DKI Jakarta",
-                "Bali",
-                "Yogyakarta",
-                "Jawa Barat",
-                "Bali"
-        ));
-        dataPertanyaan.add(new PertanyaanModel(R.drawable.dki_jakarta,
-                "Bali",
-                "Yogyakarta",
-                "DKI Jakarta",
-                "Jawa Barat",
-                "DKI Jakarta"
-        ));
-        dataPertanyaan.add(new PertanyaanModel(R.drawable.jawa_barat,
-                "DKI Jakarta",
-                "Yogyakarta",
-                "Bali",
-                "Jawa Barat",
-                "Jawa Barat"
-        ));
-        dataPertanyaan.add(new PertanyaanModel(R.drawable.d_i_yogyakarta,
-                "Yogyakarta",
-                "DKI Jakarta",
-                "Jawa Barat",
-                "Bali",
-                "Yogyakarta"
-        ));
+        TextView textJudulGame = findViewById(R.id.teks_judul_game);
+        textJudulGame.setText("Game Pakaian Adat Sehari - hari");
+
+        // get kategori game
+        String kategori = getIntent().getStringExtra("kategori");
+
+        // default get data soal pakaian sehari
+        DataSoalPakaianAdat dataSoal = new DataSoalPakaianAdat();
+        dataPertanyaan = dataSoal.getDataSoalPakaianAdatSehari();
+
+        // jika kategori pengantin
+        // get data soal pakaian pengantin
+        if (kategori.equals("pengantin") ) {
+            dataPertanyaan = dataSoal.getDataSoalPakaianAdatPengantin();
+            textJudulGame.setText("Game Pakaian Adat Pengantin");
+        }
 
         // mulai animasi
         playAnimasi(cardPertanyaan, 0, "gambar");
 
+        // handle klik jawaban
         klikJawaban(cardJawabanA, jawabanA);
         klikJawaban(cardJawabanB, jawabanB);
         klikJawaban(cardJawabanC, jawabanC);
@@ -99,18 +87,15 @@ public class GamePakaianAdatActivity extends AppCompatActivity {
                 if (posisiPertanyanModel == dataPertanyaan.size()){
                     posisiPertanyanModel--;
                     // tampilkan skor activity
-                    Intent intent = new Intent(GamePakaianAdatActivity.this, SkorActivity.class);
+                    Intent intent = new Intent(GameActivity.this, SkorActivity.class);
                     intent.putExtra("skor", skor);
                     intent.putExtra("total", dataPertanyaan.size());
                     startActivity(intent);
-
-                    Toast.makeText(GamePakaianAdatActivity.this, "Skor kamu: " + skor,
-                            Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                countAnimateStart = 0;
-                countAnimateEnd = 0;
+                hitungMulaiAnimasi = 0;
+                hitungAkhirAnimasi = 0;
                 playAnimasi(cardPertanyaan, 0, "gambar");
             }
         });
@@ -121,42 +106,42 @@ public class GamePakaianAdatActivity extends AppCompatActivity {
                 .setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
-                if (value == 0 && countAnimateStart < 4) {
+                if (value == 0 && hitungMulaiAnimasi < 4) {
                     String option = "";
                     CardView element = cardJawabanA;
-                    if (countAnimateStart == 0) {
+                    if (hitungMulaiAnimasi == 0) {
                         option = dataPertanyaan.get(posisiPertanyanModel).getJawabanA();
                         element = cardJawabanA;
-                    }else if (countAnimateStart == 1) {
+                    }else if (hitungMulaiAnimasi == 1) {
                         option = dataPertanyaan.get(posisiPertanyanModel).getJawabanB();
                         element = cardJawabanB;
-                    }else if (countAnimateStart == 2) {
+                    }else if (hitungMulaiAnimasi == 2) {
                         option = dataPertanyaan.get(posisiPertanyanModel).getJawabanC();
                         element = cardJawabanC;
-                    }else if (countAnimateStart == 3) {
+                    }else if (hitungMulaiAnimasi == 3) {
                         element = cardJawabanD;
                         option = dataPertanyaan.get(posisiPertanyanModel).getJawabanD();
                     }
                     playAnimasi(element, 0, option);
-                    countAnimateStart++;
+                    hitungMulaiAnimasi++;
                 }
             }
 
             @Override
             public void onAnimationEnd(Animator animator) {
                 // data change
-                if (value == 0 && countAnimateEnd < 4) {
+                if (value == 0 && hitungAkhirAnimasi < 4) {
                     if (!data.equals("gambar")) {
-                        if (countAnimateEnd == 0) {
+                        if (hitungAkhirAnimasi == 0) {
                             jawabanA.setText(data);
-                        }else if (countAnimateEnd == 1) {
+                        }else if (hitungAkhirAnimasi == 1) {
                             jawabanB.setText(data);
-                        }else if (countAnimateEnd == 2) {
+                        }else if (hitungAkhirAnimasi == 2) {
                             jawabanC.setText(data);
-                        }else if (countAnimateEnd == 3) {
+                        }else if (hitungAkhirAnimasi == 3) {
                             jawabanD.setText(data);
                         }
-                        countAnimateEnd++;
+                        hitungAkhirAnimasi++;
                     }
                 }
 
@@ -181,11 +166,9 @@ public class GamePakaianAdatActivity extends AppCompatActivity {
     }
 
     private void periksaJawaban(String jawaban) {
+        // jawaban benar tambah skor
         if (jawaban.equals(dataPertanyaan.get(posisiPertanyanModel).getJawabanBenar())) {
-            // benar
             skor++;
-        } else {
-            // salah
         }
     }
 

@@ -14,11 +14,22 @@ public class KategoriGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kategori_game);
 
-        CardView cardGamePakaianAdat = findViewById(R.id.cardGamePakaianAdat);
-        cardGamePakaianAdat.setOnClickListener(new View.OnClickListener() {
+        CardView cardGamePakaianAdatSehari = findViewById(R.id.cardGamePakaianAdatSehari);
+        cardGamePakaianAdatSehari.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(KategoriGameActivity.this, GamePakaianAdatActivity.class);
+                Intent intent = new Intent(KategoriGameActivity.this, GameActivity.class);
+                intent.putExtra("kategori", "sehari");
+                KategoriGameActivity.this.startActivity(intent);
+            }
+        });
+
+        CardView cardGamePakaianAdatPengantin = findViewById(R.id.cardGamePakaianAdatPengantin);
+        cardGamePakaianAdatPengantin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(KategoriGameActivity.this, GameActivity.class);
+                intent.putExtra("kategori", "pengantin");
                 KategoriGameActivity.this.startActivity(intent);
             }
         });

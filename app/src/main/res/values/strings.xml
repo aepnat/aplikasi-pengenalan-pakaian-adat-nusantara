@@ -17,4 +17,6 @@
     <string name="skor">SKOR</string>
     <string name="skor_nilai_strip">-</string>
     <string name="selesai">Selesai</string>
+    <string name="strip">-</string>
+    <string name="pertanyaan_game">Pakaian adat dari daerah mana gambar di atas?</string>
 </resources>
