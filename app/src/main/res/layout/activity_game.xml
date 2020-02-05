@@ -10,16 +10,25 @@
     tools:context=".TentangAplikasiActivity">
 
     <RelativeLayout
-        android:layout_marginTop="50dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/back_border"/>
+
 
         <TextView
             android:id="@+id/teks_judul_game"
             android:text="@string/strip"
             android:textSize="24sp"
             android:textColor="#FFF"
+            android:layout_marginTop="100dp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -28,8 +37,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
+        android:layout_height="wrap_content">
         <GridLayout
             android:id="@+id/mainGrid"
             android:rowCount="2"

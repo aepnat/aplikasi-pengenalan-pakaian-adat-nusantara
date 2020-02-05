@@ -78,6 +78,17 @@ public class GameActivity extends AppCompatActivity {
         klikJawaban(cardJawabanB, jawabanB);
         klikJawaban(cardJawabanC, jawabanC);
         klikJawaban(cardJawabanD, jawabanD);
+
+        ImageView imageBackIcon = findViewById(R.id.back_icon);
+        imageBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GameActivity.this, MenuUtamaActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void klikJawaban(View view, final TextView jawaban) {
@@ -198,8 +209,7 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(GameActivity.this, "Kamu harus menyelesaikan kuis ini.",
-                Toast.LENGTH_SHORT).show();
+        //
     }
 
 }
