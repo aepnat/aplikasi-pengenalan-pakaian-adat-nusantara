@@ -26,8 +26,8 @@
 
     <GridLayout
         android:id="@+id/mainGrid"
-        android:rowCount="4"
-        android:columnCount="1"
+        android:rowCount="2"
+        android:columnCount="2"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_weight="6"
@@ -59,6 +59,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:src="@drawable/background"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
+
                 <TextView
                     android:textAlignment="center"
                     android:text="@string/materi_pakaian"
@@ -66,7 +72,7 @@
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="35dp" />
 
             </LinearLayout>
 
@@ -95,6 +101,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:src="@drawable/ilustrasi2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
+
                 <TextView
                     android:textAlignment="center"
                     android:text="@string/game_tebak"
@@ -102,7 +114,7 @@
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="35dp" />
 
             </LinearLayout>
 
@@ -134,6 +146,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:src="@drawable/about_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
+
                 <TextView
                     android:textAlignment="center"
                     android:text="@string/tentang_aplikasi"
@@ -141,7 +159,7 @@
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -170,6 +188,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:src="@drawable/cancel"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
+
                 <TextView
                     android:textAlignment="center"
                     android:text="@string/keluar"
@@ -177,7 +201,7 @@
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
