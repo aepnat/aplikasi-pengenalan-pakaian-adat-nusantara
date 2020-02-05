@@ -26,8 +26,8 @@
 
     <GridLayout
         android:id="@+id/mainGrid"
-        android:rowCount="2"
-        android:columnCount="2"
+        android:rowCount="4"
+        android:columnCount="1"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_weight="6"
@@ -58,12 +58,6 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/background"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
@@ -100,12 +94,6 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/ilustrasi2"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
@@ -146,12 +134,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:src="@drawable/about_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp" />
-
                 <TextView
                     android:textAlignment="center"
                     android:text="@string/tentang_aplikasi"
@@ -187,12 +169,6 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/cancel"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp" />
 
                 <TextView
                     android:textAlignment="center"
