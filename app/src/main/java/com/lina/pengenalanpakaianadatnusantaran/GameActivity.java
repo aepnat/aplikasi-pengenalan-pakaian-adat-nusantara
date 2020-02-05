@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
@@ -88,8 +89,9 @@ public class GameActivity extends AppCompatActivity {
                     posisiPertanyanModel--;
                     // tampilkan skor activity
                     Intent intent = new Intent(GameActivity.this, SkorActivity.class);
-                    intent.putExtra("skor", skor);
-                    intent.putExtra("total", dataPertanyaan.size());
+                    double skorTotal = ((double) skor / dataPertanyaan.size()) * 100;
+                    int hasil = (int) skorTotal;
+                    intent.putExtra("skor", hasil);
                     startActivity(intent);
                     return;
                 }

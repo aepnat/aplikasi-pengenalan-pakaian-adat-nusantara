@@ -19,9 +19,7 @@ public class SkorActivity extends AppCompatActivity {
         CardView cardSelesai = findViewById(R.id.cardSelesai);
 
         String skor = String.valueOf(getIntent().getIntExtra("skor", 0));
-        String total = String.valueOf(getIntent().getIntExtra("total", 0));
-        String skor_val = skor + " / " + total;
-        textSkor.setText(skor_val);
+        textSkor.setText(skor);
 
         cardSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
