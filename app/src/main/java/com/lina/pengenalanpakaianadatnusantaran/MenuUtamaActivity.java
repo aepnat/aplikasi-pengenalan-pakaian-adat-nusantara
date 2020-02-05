@@ -1,8 +1,10 @@
 package com.lina.pengenalanpakaianadatnusantaran;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,8 +29,24 @@ public class MenuUtamaActivity extends AppCompatActivity {
         cardExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finishAffinity();
-                System.exit(0);
+                AlertDialog.Builder builder = new AlertDialog.Builder(MenuUtamaActivity.this);
+                builder.setMessage("Apakah Kamu yakin mau keluar ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finishAffinity();
+                                System.exit(0);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
