@@ -1,9 +1,11 @@
 package com.lina.pengenalanpakaianadatnusantaran;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.animation.Animator;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -83,22 +85,6 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 periksaJawaban(jawaban.getText().toString());
-                posisiPertanyanModel++;
-
-                if (posisiPertanyanModel == dataPertanyaan.size()){
-                    posisiPertanyanModel--;
-                    // tampilkan skor activity
-                    Intent intent = new Intent(GameActivity.this, SkorActivity.class);
-                    double skorTotal = ((double) skor / dataPertanyaan.size()) * 100;
-                    int hasil = (int) skorTotal;
-                    intent.putExtra("skor", hasil);
-                    startActivity(intent);
-                    return;
-                }
-
-                hitungMulaiAnimasi = 0;
-                hitungAkhirAnimasi = 0;
-                playAnimasi(cardPertanyaan, 0, "gambar");
             }
         });
     }
@@ -167,11 +153,47 @@ public class GameActivity extends AppCompatActivity {
         });
     }
 
-    private void periksaJawaban(String jawaban) {
-        // jawaban benar tambah skor
-        if (jawaban.equals(dataPertanyaan.get(posisiPertanyanModel).getJawabanBenar())) {
-            skor++;
+    private void pertanyaanSelanjutnya() {
+        posisiPertanyanModel++;
+
+        if (posisiPertanyanModel == dataPertanyaan.size()){
+            posisiPertanyanModel--;
+            // tampilkan skor activity
+            Intent intent = new Intent(GameActivity.this, SkorActivity.class);
+            double skorTotal = ((double) skor / dataPertanyaan.size()) * 100;
+            int hasil = (int) skorTotal;
+            intent.putExtra("skor", hasil);
+            startActivity(intent);
+            return;
         }
+
+        hitungMulaiAnimasi = 0;
+        hitungAkhirAnimasi = 0;
+        playAnimasi(cardPertanyaan, 0, "gambar");
+    }
+
+    private void periksaJawaban(String jawaban) {
+        String message = "Yeay! Jawaban kamu benar.";
+        String jawabanBenar = dataPertanyaan.get(posisiPertanyanModel).getJawabanBenar();
+
+        // jawaban benar tambah skor
+        if (jawaban.equals(jawabanBenar)) {
+            skor++;
+        } else {
+            message = "Uhh! Jawaban kamu salah :( yang benar itu " + jawabanBenar;
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(GameActivity.this);
+        builder.setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("Lanjut", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        pertanyaanSelanjutnya();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     @Override
