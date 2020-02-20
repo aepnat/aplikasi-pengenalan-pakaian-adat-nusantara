@@ -1,6 +1,7 @@
 package com.lina.pengenalanpakaianadatnusantaran;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DataSoalPakaianAdat {
@@ -40,6 +41,9 @@ public class DataSoalPakaianAdat {
                 "Yogyakarta"
         ));
 
+        // Acak data pertanyaan
+        Collections.shuffle(dataPertanyaan);
+
         return dataPertanyaan;
     }
 
@@ -74,6 +78,9 @@ public class DataSoalPakaianAdat {
                 "Jawa Barat",
                 "Jawa Barat"
         ));
+
+        // Acak data pertanyaan
+        Collections.shuffle(dataPertanyaan);
 
         return dataPertanyaan;
     }
