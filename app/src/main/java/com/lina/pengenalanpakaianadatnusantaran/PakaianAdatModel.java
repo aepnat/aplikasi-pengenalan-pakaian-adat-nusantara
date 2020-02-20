@@ -1,15 +1,19 @@
 package com.lina.pengenalanpakaianadatnusantaran;
 
-public class PakaianAdatModel {
+import java.io.Serializable;
+
+public class PakaianAdatModel implements Serializable {
 
     private int image;
     private String title;
     private String desc;
+    private String content;
 
-    public PakaianAdatModel(int image, String title, String desc) {
+    public PakaianAdatModel(int image, String title, String desc, String content) {
         this.image = image;
         this.title = title;
         this.desc = desc;
+        this.content = content;
     }
 
     public int getImage() {
@@ -34,5 +38,13 @@ public class PakaianAdatModel {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
